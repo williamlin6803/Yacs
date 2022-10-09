@@ -8,10 +8,20 @@
 </head>
 <body>
     <h1>William Lin</h1>
-    <div id="app">
-        <p>{{ title }} - {{ author }} - {{ age }}<p>
-        <button v-on:click="age++">Increase age</button>
-    </div>
+    <div id="app"> <!-- variables cannot be used outside of the scope app  -->
+        <div v-if="Display"></div>
+            <p>{{ title }} - {{ author }} - {{ age }}<p>  <!-- initalized in lines 5-7 in app.js-->
+            <button v-on:click="age++">Increase age</button> <!-- create a button  -->
+        </div>
+        <div v-if="Secondary Button"></div>
+            <p>{{ title }} - {{ author }} - {{ age }}<p> 
+            <button v-on:click="age++">Increase age</button> 
+        </div>
+        <button @click="Display items">
+            <span v-if="Show">Show Books</span>
+            <span v-if="Hide">Hide Books</span>
+        </button>
+    </body>div>
 
     <script src="app.js"></script>
 </body>

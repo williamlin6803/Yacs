@@ -1,7 +1,7 @@
 //test.html line 7 gives us access to a Vue object
 const app = Vue.createApp({
-    data() {
-        return {
+    data() {        //Create a function
+        return {    //Return a data object in the function
             title: 'YACS',
             author: 'William Lin',
             age: 19
@@ -10,6 +10,11 @@ const app = Vue.createApp({
     methods: {
         changeTitle() {
             console.log('clicked')
+        }
+    }
+    methods: {
+        toggleShowBooks() {
+            this.toggleShowBooks = !this.showBooks
         }
     }
                 //The comp a root component
